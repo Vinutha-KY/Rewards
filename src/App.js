@@ -54,7 +54,7 @@ const App = () => {
         setLoading(false);
       })
       .catch((err) => {
-        setError('Failed to fetch transactions');
+        setError('No transactions');
         setLoading(false);
       });
   }, [selectedCustomer, selectedMonth, selectedYear, page]);
@@ -107,7 +107,7 @@ const App = () => {
                   
                 </>
               ) : (
-                !loading && <p>No transactions found.</p> 
+                !loading && <p>No transactions</p> 
               )
             )}
           </TableWrapper>
@@ -118,3 +118,5 @@ const App = () => {
 };
 
 export default App;
+
+

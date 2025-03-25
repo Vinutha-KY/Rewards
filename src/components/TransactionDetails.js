@@ -39,3 +39,5 @@ TransactionDetails.propTypes = {
 };
 
 export default TransactionDetails;
+
+
