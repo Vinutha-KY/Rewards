@@ -1,6 +1,4 @@
-export const paginate = (data, page, itemsPerPage) => {
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    return data.slice(start, end);
-  };
-  
+export const paginate = (data, page, pageSize) => {
+  const start = (page - 1) * pageSize;
+  return data.slice(start, start + pageSize);
+};

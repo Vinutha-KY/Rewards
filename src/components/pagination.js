@@ -4,15 +4,17 @@ import { PaginationContainer, PaginationButton, PaginationText } from '../styles
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => (
   <PaginationContainer>
-    <PaginationButton 
-      onClick={() => onPageChange(currentPage - 1)} 
-      disabled={currentPage === 1}>
+    <PaginationButton
+      onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
+      disabled={currentPage === 1}
+    >
       Previous
     </PaginationButton>
     <PaginationText>{`Page ${currentPage} of ${totalPages}`}</PaginationText>
-    <PaginationButton 
-      onClick={() => onPageChange(currentPage + 1)} 
-      disabled={currentPage === totalPages}>
+    <PaginationButton
+      onClick={() => currentPage < totalPages && onPageChange(currentPage + 1)}
+      disabled={currentPage === totalPages}
+    >
       Next
     </PaginationButton>
   </PaginationContainer>
@@ -25,4 +27,3 @@ Pagination.propTypes = {
 };
 
 export default Pagination;
-
