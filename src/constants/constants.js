@@ -1,4 +1,4 @@
-export const TABLE_HEADERS = ['Transaction ID', 'Amount', 'Date', 'Rewards'];
+export const TABLE_HEADERS = ['Transaction ID', 'Amount', 'Date', 'Points'];
 export const INITIAL_CUSTOMERS = [
     { id: 1 },
     { id: 2 },

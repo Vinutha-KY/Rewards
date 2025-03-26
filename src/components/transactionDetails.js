@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Table, TableHeader, TableRow, TableData } from '../styles/AppStyles';
 import { TABLE_HEADERS } from '../constants/constants';
+import { calculatePoints } from '../utils/transactionUtils'; 
 
 const TransactionDetails = ({ transactions }) => (
   <div>
@@ -11,7 +12,7 @@ const TransactionDetails = ({ transactions }) => (
         <TableRow>
           {TABLE_HEADERS.map((header) => (
             <TableHeader key={header}>{header}</TableHeader>
-          ))}
+          ))}          
         </TableRow>
       </thead>
       <tbody>
@@ -20,7 +21,7 @@ const TransactionDetails = ({ transactions }) => (
             <TableData>{transaction.transactionId}</TableData>
             <TableData>{transaction.amount}</TableData>
             <TableData>{transaction.date}</TableData>
-            <TableData>{transaction.amount > 100 ? 'High' : 'Low'}</TableData>
+            <TableData>{calculatePoints(transaction.amount)}</TableData> 
           </TableRow>
         ))}
       </tbody>

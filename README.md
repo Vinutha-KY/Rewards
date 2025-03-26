@@ -31,7 +31,7 @@ When no transactions are available, the "No transactions" message will be displa
 Test Case 1: View Transactions for a Customer
 Description: Ensure that transaction details are displayed when a customer is selected.
 Expected Result: The transaction details should be displayed in a paginated table.
-Screenshot:![alt text](image.png) ![alt text](image-1.png) ![alt text](image-2.png) ![alt text](image-3.png) ![alt text](image-4.png) ![alt text](image-5.png)
+Screenshot:  ![alt text](image-2.png) ![alt text](image-3.png) ![alt text](image-4.png) ![alt text](image-7.png) ![alt text](image-8.png) ![alt text](image-9.png)
 
 Test Case 2:  No Transactions  ![alt text](image-6.png)
 Description: Ensure that an error message is displayed when the transaction fetch fails.

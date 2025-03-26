@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { INITIAL_CUSTOMERS } from './constants/constants'; 
 import AppContent from './AppContent';
 import { fetchTransactions } from './api/mockApi';
-import { paginate } from './utils/paginationUtils';
+import { paginate } from './utils/transactionUtils';
 
 const App = () => {
   const [customers] = useState(INITIAL_CUSTOMERS); 
