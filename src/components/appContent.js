@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CustomerList from './components/customerList';
-import Filters from './components/filters';
-import TransactionDetails from './components/transactionDetails';
-import Pagination from './components/pagination';
-import { AppContainer, Header, CustomerListContainer, FiltersContainer, LoadingMessage, ErrorMessage, TableWrapper } from './styles/AppStyles';
+import CustomerList from './customerList';
+import Filters from './filters';
+import TransactionDetails from './transactionDetails';
+import Pagination from './pagination';
+import { AppContainer, Header, CustomerListContainer, FiltersContainer, LoadingMessage, ErrorMessage, TableWrapper } from '../styles/AppStyles';
 
 const AppContent = ({
   customers,

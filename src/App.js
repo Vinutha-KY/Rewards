@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { INITIAL_CUSTOMERS } from './constants/constants'; 
-import AppContent from './AppContent';
+import AppContent from './components/appContent';
 import { fetchTransactions } from './api/mockApi';
 import { paginate } from './utils/transactionUtils';
+import logger from './logger/logging';
 
 const App = () => {
   const [customers] = useState(INITIAL_CUSTOMERS); 
@@ -33,6 +34,8 @@ const App = () => {
     setLoading(true);
     setError('');
 
+    logger.logInfo(`Fetching transactions for customer: ${selectedCustomer} in ${selectedMonth}/${selectedYear}`);
+
     fetchTransactions(selectedCustomer, selectedYear, selectedMonth)
       .then((data) => {
         const paginatedData = paginate(data, page, 3);
@@ -41,6 +44,7 @@ const App = () => {
         setLoading(false);
       })
       .catch((err) => {
+        logger.logError('Error fetching transactions: ' + err);
         setError('No transactions');
         setLoading(false);
       });
